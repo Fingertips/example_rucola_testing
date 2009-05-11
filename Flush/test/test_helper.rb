@@ -16,3 +16,5 @@ module Kernel
     raise "Please stub Kernel#system methods in your tests so you don't break your system accidentally"
   end
 end
+
+OSX::NSApp = OSX::NSApplication.sharedApplication
