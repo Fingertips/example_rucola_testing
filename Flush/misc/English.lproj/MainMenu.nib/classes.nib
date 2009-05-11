@@ -13,17 +13,30 @@
 			<string>NSObject</string>
 		</dict>
 		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>flushCache</key>
+				<string>id</string>
+			</dict>
 			<key>CLASS</key>
 			<string>ApplicationController</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 			<key>OUTLETS</key>
 			<dict>
-				<key>main_window</key>
+				<key>window</key>
 				<string>id</string>
 			</dict>
 			<key>SUPERCLASS</key>
 			<string>RCController</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSButton</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSControl</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
