@@ -14,11 +14,11 @@ describe 'ApplicationController' do
   it "should set the maximum and minimum size of the window" do
     controller.awakeFromNib
     
-    window.minSize.width.should == 250
-    window.minSize.height.should == 110
+    window.minSize.width.should == 215
+    window.minSize.height.should == 132
     
-    window.maxSize.width.should == 250
-    window.maxSize.height.should == 110
+    window.maxSize.width.should == 215
+    window.maxSize.height.should == 132
   end
   
   it "should set itself as the application delegate" do

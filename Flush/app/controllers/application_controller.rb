@@ -2,7 +2,7 @@ class ApplicationController < Rucola::RCController
   ib_outlet :window
   
   def awakeFromNib
-    size = OSX::NSSize.new(250, 110)
+    size = OSX::NSSize.new(215, 132)
     @window.setMinSize(size)
     @window.setMaxSize(size)
     
