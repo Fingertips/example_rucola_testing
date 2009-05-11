@@ -10,3 +10,9 @@ require 'rucola/test_helper'
 require 'rucola/test_case'
 
 require File.expand_path('../../config/boot', __FILE__)
+
+module Kernel
+  def system(*)
+    raise "Please stub Kernel#system methods in your tests so you don't break your system accidentally"
+  end
+end
