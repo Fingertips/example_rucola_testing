@@ -40,6 +40,19 @@
 		</dict>
 		<dict>
 			<key>CLASS</key>
+			<string>AboutController</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>window</key>
+				<string>id</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSWindowController</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
 			<string>RCController</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>

@@ -19,6 +19,8 @@
 		514292D20CC66CDC00F9CEEF /* vendor in Resources */ = {isa = PBXBuildFile; fileRef = 514292CC0CC66CDC00F9CEEF /* vendor */; };
 		514292EF0CC6823A00F9CEEF /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 514292ED0CC6823A00F9CEEF /* MainMenu.nib */; };
 		51E0DC4F0D8175CF00C898A2 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 51E0DC4D0D8175CF00C898A2 /* lib */; };
+		63777D260FB995DD009D6E4F /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63777D250FB995DD009D6E4F /* AboutController.m */; };
+		63777D280FB995EB009D6E4F /* AboutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63777D270FB995EB009D6E4F /* AboutController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		514292CC0CC66CDC00F9CEEF /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vendor; sourceTree = "<group>"; };
 		514292EE0CC6823A00F9CEEF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = misc/English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		51E0DC4D0D8175CF00C898A2 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		63777D250FB995DD009D6E4F /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutController.m; path = app/controllers/AboutController.m; sourceTree = "<group>"; };
+		63777D270FB995EB009D6E4F /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutController.h; path = app/controllers/AboutController.h; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = rb_main.rb; path = misc/rb_main.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				63777D270FB995EB009D6E4F /* AboutController.h */,
+				63777D250FB995DD009D6E4F /* AboutController.m */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				514292ED0CC6823A00F9CEEF /* MainMenu.nib */,
 				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
@@ -139,6 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63777D280FB995EB009D6E4F /* AboutController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+				63777D260FB995DD009D6E4F /* AboutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
