@@ -21,4 +21,5 @@ Thread.new { OSX.CFRunLoopRun }
 # Rucola normally sets NSApp properly, but doesn't do this in tests
 OSX::NSApp = OSX::NSApplication.sharedApplication
 
-
+$:.unshift(File.expand_path('../ext', __FILE__))
+require 'collector'

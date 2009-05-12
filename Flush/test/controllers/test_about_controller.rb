@@ -7,7 +7,8 @@ describe 'AboutController' do
   tests OSX::AboutController
   
   def after_setup
-    ib_outlets :window => OSX::NSWindow.alloc.init
+    @window = Collector.new(:makeKeyAndOrderFront)
+    controller.setWindow(@window)
   end
   
   it "should initialize" do
@@ -15,7 +16,7 @@ describe 'AboutController' do
   end
   
   it "should show an about window" do
-    window.expects(:makeKeyAndOrderFront)
     controller.showAbout(nil)
+    assert @window.received?(:makeKeyAndOrderFront)
   end
 end
