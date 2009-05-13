@@ -3,7 +3,7 @@ require File.expand_path('../../test_helper', __FILE__)
 describe 'ApplicationController' do
   tests ApplicationController
   
-  def after_setup
+  def setup
     ib_outlets :window => OSX::NSWindow.alloc.init
   end
   
