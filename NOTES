@@ -1,0 +1,16 @@
+# Testing Cocoa with Ruby
+
+Testing is kinda similar to science, you want your tests to express a real world situation but you want to keep as many variables constant as possible. The solution some people came up with is mocking and stubbing. Expectations go hand in hand with stubbing, because they're basically stubbed methods which you're expecting to be called.
+
+## Simple test for models
+
+x Test controller init
+  x Verbosity
+  x Outlets stubben
+x Test flush cache
+x Runloop
+x Cocoa testing
+  x Framework
+  x Ruby stub / compile bundle / require
+x Alloc / init testing
+- More reading: UI Testing (Brian Marick)
