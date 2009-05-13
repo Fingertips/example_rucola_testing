@@ -6,7 +6,7 @@ ObjCCompiler.require('app/controllers/AboutController')
 describe 'AboutController' do
   tests OSX::AboutController
   
-  def setup
+  before do
     @window = Collector.new(:makeKeyAndOrderFront)
     controller.setWindow(@window)
   end

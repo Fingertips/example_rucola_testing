@@ -5,6 +5,6 @@ describe "Watcher" do
     watcher = Watcher.alloc
     watcher.stubs(:super_init).returns(watcher)
     watcher.init
-    watcher.examineQueue.should.be.empty?
+    watcher.queue.should.be.empty?
   end
 end

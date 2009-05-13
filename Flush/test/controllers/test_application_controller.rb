@@ -3,8 +3,8 @@ require File.expand_path('../../test_helper', __FILE__)
 describe 'ApplicationController' do
   tests ApplicationController
   
-  def setup
-    ib_outlets :window => OSX::NSWindow.alloc.init
+  before do
+    #ib_outlets :window => OSX::NSWindow.alloc.init
   end
   
   it "should initialize" do
@@ -12,6 +12,8 @@ describe 'ApplicationController' do
   end
   
   it "should set the maximum and minimum size of the window" do
+    ib_outlets :window => OSX::NSWindow.alloc.init
+    
     controller.awakeFromNib
     
     window.minSize.width.should == 215

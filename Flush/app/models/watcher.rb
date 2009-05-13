@@ -1,5 +1,5 @@
 class Watcher < OSX::NSObject
-  attr_accessor :examineQueue
+  attr_accessor :queue
   
   def init
     if super_init
@@ -9,6 +9,6 @@ class Watcher < OSX::NSObject
   end
   
   def emptyQueue
-    self.examineQueue = []
+    self.queue = []
   end
 end
