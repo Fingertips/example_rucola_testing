@@ -6,8 +6,8 @@
   [window makeKeyAndOrderFront:self];
 }
 
--(void)setWindow:(id)w {
-  window = [w retain];
+-(void)setWindow:(id)win {
+  window = [win retain];
 }
 
 @end

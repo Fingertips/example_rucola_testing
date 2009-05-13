@@ -4,5 +4,5 @@
   IBOutlet NSWindow *window;
 }
 -(void) showAbout:(id)sender;
--(void) setWindow:(id)w;
+-(void) setWindow:(id)win;
 @end
