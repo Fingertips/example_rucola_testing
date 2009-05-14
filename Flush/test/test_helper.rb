@@ -18,8 +18,14 @@ require 'osx/cocoa'
 # Some OS X classes need a runloop to function properly, let's just run one in a Thread somewhere
 Thread.new { OSX.CFRunLoopRun }
 
-# Rucola normally sets NSApp properly, but doesn't do this in tests
-OSX::NSApp = OSX::NSApplication.sharedApplication
-
 $:.unshift(File.expand_path('../ext', __FILE__))
 require 'collector'
+
+# Rucola doesn't do this in older version
+OSX::NSApp = OSX::NSApplication.sharedApplication
+
+class OSX::NSObject
+  def super_init
+    self
+  end
+end

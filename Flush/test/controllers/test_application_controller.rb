@@ -3,14 +3,6 @@ require File.expand_path('../../test_helper', __FILE__)
 describe 'ApplicationController' do
   tests ApplicationController
   
-  before do
-    #ib_outlets :window => OSX::NSWindow.alloc.init
-  end
-  
-  it "should initialize" do
-    controller.should.be.an.instance_of ApplicationController
-  end
-  
   it "should set the maximum and minimum size of the window" do
     ib_outlets :window => OSX::NSWindow.alloc.init
     

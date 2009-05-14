@@ -2,15 +2,42 @@
 
 Testing is kinda similar to science, you want your tests to express a real world situation but you want to keep as many variables constant as possible. The solution some people came up with is mocking and stubbing. Expectations go hand in hand with stubbing, because they're basically stubbed methods which you're expecting to be called.
 
-## Simple test for models
+## Testing models
 
-x Test controller init
-  x Verbosity
-  x Outlets stubben
-x Test flush cache
-x Runloop
-x Cocoa testing
-  x Framework
-  x Ruby stub / compile bundle / require
-x Alloc / init testing
-- More reading: UI Testing (Brian Marick)
+Testing models is usually relatively easy because they usually just manipulate some data and call other methods.
+
+* Testing class methods
+* Testing initialization
+* Testing instance methods
+
+## Testing controllers
+
+Testing controllers can be a bit harder because most controllers have a whole array of outlets and receive all kinds of messages.
+
+* Testing intialization (awakeFromNib)
+* Testing actions, notifications, and other methods
+
+## Testing views
+
+Because views are usually created in a declarative way they only way to test them is to repeat all the declarations, and that is just weird. However, you can test the functional part of the view, for instance if the action associated to a button is actually called when the button is called.
+
+I've noticed that it can be hard to activate all objects from a NIB because certain messages appear not to end up on objects on Ruby's side of the bridge. Your mileage may vary.
+
+## The Runloop
+
+When you're running tests you generally don't initialize the entire application so when you're testing features that need a runloop you need to start one yourself.
+
+## Testing code written in Objective-C
+
+It's possible to test code written in Objective-C, but there are some quirks. First of all you obviously need to compile the code and load it into the Ruby environment. The way we do it is to compile into a bundle and load it as if it's a Ruby extension. It's also possible to compile all your code into a framework and load it all at once.
+
+Once you've successfully loaded the class you want to test you will need to jump through some hoops to stub things like outlets.
+
+# Final words
+
+When you write Cocoa applications using RubyCocoa most Ruby test facilities should work just fine. Once you try to test things in Objective-C land you might have to jump through some hoops to get it done, but it's certainly possible.  Most of the problems with the bridge should disappear once MacRuby matures.
+
+# References:
+
+  Brian Marick: http://www.exampler.com/blog/category/rubycocoa/
+  Squish for Mac: http://www.froglogic.com
